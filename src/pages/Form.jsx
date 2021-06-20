@@ -1,11 +1,14 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Auth";
 import { supabase } from "../services/base";
 import Dashboardnav from "../components/dashboardNavbar";
+import Message from "../components/message";
 
 function Form() {
   const styler =
     "shadow appearence-none w-3/4 py-2 px-3 text-grey-darker mb-2 border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-600 text-white rounded shadow-md";
+
+  const [initMessage, setMessage] = useState(false);
 
   const { currentStatus } = useContext(AuthContext);
 
@@ -24,6 +27,7 @@ function Form() {
       ]);
 
       console.log(error, data);
+      setMessage(true);
     };
 
     submitter();
@@ -37,6 +41,7 @@ function Form() {
     <section className="relative min-h-screen p-10">
       <Dashboardnav />
       <div className="container mx-auto w-full md:w-1/2 mt-10">
+        {initMessage && <Message />}
         <form onSubmit={submitHandler}>
           <div className="px-8">
             <div>
