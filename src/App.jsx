@@ -5,9 +5,8 @@ import { Firebaseauthprovider } from "./Auth";
 import Private from "./pages/Private";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
-import Search from "./pages/Search";
-import AdminDashboard from "./pages/AdminDashboard";
 import Form from "./pages/Form";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -15,11 +14,7 @@ function App() {
       <Router>
         <Switch>
           <Private exact path="/dashboard" component={Dashboard} />
-          <Private exact path="/search" component={Search} />
           <Private exact path="/form" component={Form} />
-          <Route path="/admin" exact>
-            <AdminDashboard />
-          </Route>
           <Route path="/" exact>
             <Home />
           </Route>
@@ -28,6 +23,9 @@ function App() {
           </Route>
           <Route path="/auth/login">
             <Login />
+          </Route>
+          <Route path="/admin">
+            <Admin />
           </Route>
         </Switch>
       </Router>

@@ -19,13 +19,6 @@ function Dashboardnav() {
         >
           New Complaint
         </NavLink>
-        <NavLink
-          to="/search"
-          className="text-white border-b-2 border-blue-500 hover:bg-white p-3 hover:text-blue-500 mx-5 transition duration-200 ease-in-out"
-          exact
-        >
-          Search
-        </NavLink>
         <button
           className="text-white border-b-2 border-blue-500 hover:bg-white p-3 hover:text-blue-500 mx-5 font-bold transition duration-200 ease-in-out"
           onClick={() => firebaseAuth.signOut()}
