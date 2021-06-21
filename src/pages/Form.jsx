@@ -23,6 +23,7 @@ function Form() {
           description: description.value,
           createdBy: currentStatus.uid,
           location: location.value,
+          email: currentStatus.email,
         },
       ]);
 

@@ -49,7 +49,7 @@ function Register({ history }) {
           )}
           <div className="mb-4">
             <label className="block text-gray-darker text-sm font-bold mb-2 text-white">
-              Employee ID
+              Employee Username
             </label>
             <input className={styler} type="text" name="employeeid" />
           </div>
