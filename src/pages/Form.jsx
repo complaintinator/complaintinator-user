@@ -30,6 +30,7 @@ function Form() {
       ]);
 
       setMessage(true);
+      console.log(data, error);
 
       setTimeout(() => {
         history.push("/dashboard");
