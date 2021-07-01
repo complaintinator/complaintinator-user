@@ -54,13 +54,18 @@ function Login({ history }) {
             <label className="block text-gray-darker text-sm font-bold mb-2 text-white">
               Email
             </label>
-            <input className={styler} type="email" name="email" />
+            <input className={styler} type="email" name="email" required />
           </div>
           <div className="mb-4">
             <label className="block text-gray-darker text-sm font-bold mb-2 text-white">
               Password
             </label>
-            <input className={styler} type="password" name="password" />
+            <input
+              className={styler}
+              type="password"
+              name="password"
+              required
+            />
           </div>
           <button className="bg-blue-500 text-white mt-5 px-4 py-3 hover:bg-blue-400">
             Continue
