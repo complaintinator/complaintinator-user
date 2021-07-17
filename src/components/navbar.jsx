@@ -26,12 +26,12 @@ function Navbar() {
           >
             Login
           </Link>
-          <Link
+          <a
+            href="https://complaintinator-admin.netlify.app"
             className="mr-5 text-yellow-500 p-3 rounded hover:text-blue-400 hover:bg-white transition duration-500 ease-in-out"
-            to="/admin"
           >
             Admin
-          </Link>
+          </a>
           {currentStatus && (
             <Link
               className="mr-5 text-yellow-500 p-3 rounded hover:text-blue-400 hover:bg-white transition duration-500 ease-in-out"
